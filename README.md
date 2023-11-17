@@ -26,9 +26,8 @@ Hal Pertama yang akan dilakukan Sebelum Menjalankan Projek
 - Duplikat file `.env`.example dan ubah namanya menjadi .env.
 - Buka file `.env` dan sesuaikan pengaturan database dan konfigurasi lainnya jika diperlukan.
 
-# Generate App Key: 
-- Jalankan perintah berikut untuk menghasilkan kunci aplikasi Laravel:
-( php artisan key:generate )
+# Import Database
+ FIle sql ada di file yang di upload, silahkan import database di phpmyadmin
 
 # Migrasi Database:
 - jalankan perintah migrasi untuk membuat tabel-tabel yang diperlukan di database:
