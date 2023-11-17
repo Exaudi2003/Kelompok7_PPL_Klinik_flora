@@ -29,9 +29,6 @@ Hal Pertama yang akan dilakukan Sebelum Menjalankan Projek
 # Import Database
  FIle sql ada di file yang di upload, silahkan import database di phpmyadmin
 
-# Migrasi Database:
-- jalankan perintah migrasi untuk membuat tabel-tabel yang diperlukan di database:
-( php artisan migrate )
 
 # Jalankan Proyek
 Setelah mengikuti langkah - langkah diatas, maka kita bisa menjalankan proyek dengan mengetik : 
