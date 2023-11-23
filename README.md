@@ -67,12 +67,18 @@ Setelah mengikuti langkah - langkah diatas, maka kita bisa menjalankan proyek de
 
 - Hal yang pertama dilakukan sebelum mengimport database adalah memiliki aplikkasi navicat premium.
 - Jika belum memiliki aplikasi navicat premium dapat mendowload terlebih dahulu
-- aplikasinya dapat di download di linjk berikut 
+- aplikasinya dapat di download di link berikut 
 - ( https://drive.google.com/file/d/1vVAejzSIJuGO5wWb7ZGEyp56C1g6nmuY/view?pli=1 )
 - untuk pemasangan navicat nya dapat dilihati di link berikut ( https://www.youtube.com/watch?v=TpL8HsEfqwE )
 - untuk import database juga sudah ada dalam vidio
 - Ikuti langkah - langkah yang ada dan jalan kan programnya
 - Terimakasih jika ada kesulitan bisa dilakukan dengan bertanya
+
+#Import melalui PhpMyAdmin
+- Buka PhpMyAdmin
+- Create database baru dengan menggunakan nama yang sama dengan file sql
+- import file sqlnya
+- jalankan project
 
 
 >>>>>>> d90e390e2f6e05a74a2c381c52069aadfec93a67
