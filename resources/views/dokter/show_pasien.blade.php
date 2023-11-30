@@ -24,9 +24,9 @@
         </div><!-- /.container-fluid -->
     </div>
 
-    @if ($data->isEmpty())
+    {{-- <!-- @if ($data->isEmpty())
     <p class="font-monospace fw-bolder fs-1 text-center text-muted">Belum Ada Data Pasien</p>
-    @else
+    @else --> --}}
 
     <div class="container">
         <div class="form-group pull-right">
@@ -78,13 +78,13 @@
       <tbody class="text-center">
         @foreach ($data as $item)
         <tr >
-            <th scope="row">{{ $item->id }}</th>
-            <td>{{ $item->name }} </td>
-            <td>{{ \Carbon\Carbon::parse($item->tanggal_lahir)->isoFormat('D MMMM YYYY') }}</td>
-            <td>{{ \Carbon\Carbon::parse($item->tanggal_lahir)->diffInYears(\Carbon\Carbon::now()) }}</td>
-            <td>{{ $item->gender }}</td>
-            <td>{{ $item->phone_number }}</td>
-            <td>{{ $item->address }}</td>
+            <th scope="row">{{ $item['id'] }}</th>
+            <td>{{ $item['name'] }} </td>
+            <td>{{ \Carbon\Carbon::parse($item['tanggal_lahir'])->isoFormat('D MMMM YYYY') }}</td>
+            <td>{{ \Carbon\Carbon::parse($item['tanggal_lahir'])->diffInYears(\Carbon\Carbon::now()) }}</td>
+            <td>{{ $item['gender'] }}</td>
+            <td>{{ $item['phone_number'] }}</td>
+            <td>{{ $item['address'] }}</td>
             <td>
                 <div class="btn-group" role="group">
                     {{-- <form action="" method="POST" onsubmit="return confirm('Anda yakin ingin menghapus data ini?');">
@@ -93,7 +93,7 @@
                     </button>
                     </form> --}}
 
-                    <a href={{route('dokter.patients.edit', $item->id)}}>
+                    <a href={{route('dokter.patients.edit', $item['id'])}}>
                     <button type="submit" rel="tooltip" class="btn btn-success btn-just-icon btn-sm mr-1" data-original-title="" title="">
                         <i class="material-icons">edit</i>
                     </button>
@@ -114,7 +114,7 @@
       </tbody>
       
     </table>
-    @endif
+    {{-- @endif --}}
 
         <nav class="pagination mb-3 justify-content-end">
             <ul class="pagination btn btn-sm"> {{ $data->withQueryString()->links() }} </ul>

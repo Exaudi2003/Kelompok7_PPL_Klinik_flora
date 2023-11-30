@@ -90,14 +90,14 @@
       <tbody class="text-center">
         @foreach ($data as $obat)
         <tr >
-            <th scope="row">{{ $obat->id }}</th>
-            <td>{{ $obat->nama_obat }}</td>
-            <td>{{ $obat->keterangan }}</td>
-            <td>{{ $obat->tanggal_masuk }}</td>
-            <td>{{ $obat->jumlah }}</td>
-            <td>{{ $obat->kemasan }}</td>
+            <th scope="row">{{ $obat['id'] }}</th>
+            <td>{{ $obat['nama_obat'] }} ( {{ $obat['singkatan']  }}) </td>
+            <td>{{ $obat['keterangan'] }}</td>
+            <td>{{ $obat['tanggal_masuk'] }}</td>
+            <td>{{ $obat['jumlah'] }}</td>
+            <td>{{ $obat['kemasan'] }} ({{ $obat['ukuran'] }})</td>
             <td class="">
-                @if ($obat->jumlah <= 0)
+                @if ($obat['jumlah'] <= 0)
                     <span class="false text-white">{{ __('Habis') }}</span>
                 @else
                     <span class="true text-white">{{ __('Tersedia') }}</span>
@@ -106,13 +106,13 @@
             <td>
                 <div class="btn-group" role="group">
 
-                    <a href={{url('/obats/redirect', $obat->id)}}>
+                    <a href={{url('/obats/redirect', $obat['id'])}}>
                     <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm mr-1" data-original-title="" title="">
                         <i class="material-icons">edit</i>
                     </button>
                     </a>
                     
-                    <form action="{{ route('delete.obat', $obat->id) }}" method="POST" id="deleteForm">
+                    <form action="{{ route('delete.obat', $obat['id']) }}" method="POST" id="deleteForm">
                         @csrf
                         @method('DELETE')
                         <button type="submit" rel="tooltip" class="btn btn-danger btn-just-icon btn-sm" id="delete">

@@ -93,10 +93,10 @@
                             <label for="gender" class="col-md-4 col-form-label text-md-right" >{{ __('Jenis_Kelamin') }}</label>
 
                             <div class="col-md-6 mb-3">
-                                <select id="gender"  class="form-control @error('gender') is-invalid @enderror" name="gender" required>
-                                    <option selected disabled value="">Jenis Kelamin</option>
-                                    <option value="Laki-Laki">Laki-Laki</option>
-                                    <option value="Perempuan">Perempuan</option>
+                                <select id="gender" name="gender" class="form-control @error('gender') is-invalid @enderror" required>
+                                    <option value="" {{ !isset($data['gender']) ? 'selected' : '' }} disabled>Jenis Kelamin</option>
+                                    <option value="Laki-laki" {{ isset($data['gender']) && $data['gender'] == 'Laki-laki' ? 'selected' : '' }}>Laki-Laki</option>
+                                    <option value="Perempuan" {{ isset($data['gender']) && $data['gender'] == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
                                 </select>
 
                                 @error('gender')
@@ -120,6 +120,21 @@
                                 @enderror
                             </div>
                         </div>
+
+                        <div class="form-group row">
+                            <label for="wali" class="col-md-4 col-form-label text-md-right">{{ __('Orang Tua/Wali') }}</label>
+
+                            <div class="col-md-6 mb-3">
+                                <input id="wali" type="text" class="form-control @error('wali') is-invalid @enderror" name="wali" value="{{ old('wali') }}" required autocomplete="wali">
+
+                                @error('wali')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
 
                         <div class="form-group row">
                             <label for="phone_number" class="col-md-4 col-form-label text-md-right">{{ __('Nomor Telepon') }}</label>
