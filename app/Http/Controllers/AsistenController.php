@@ -7,7 +7,11 @@ use App\Models\MedicalRecord;
 use App\Models\Obat;
 use App\Models\User;
 use App\Models\Patient;
+use Carbon\Carbon as CarbonCarbon;
+use Carbon\Doctrine\CarbonType;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 
@@ -41,13 +45,38 @@ class AsistenController extends Controller
 
     public function show(Request $request){
         
-        $asisten = User::query();
-        $asisten -> select('users.*', 'name');
-        $asisten -> where('role_id', '2');
-        if(!empty($request->asisten)) {
-            $asisten->where('name', 'like', '%'.$request->asisten.'%');
-        }
-        $pegawai = $asisten->get();
+        $client = new Client();
+        $url = "http://127.0.0.1:8000/api/showAkun";
+        $response = $client->request('GET', $url);
+        $content = $response->getBody()->getContents();
+        $contentArray = json_decode($content, true);
+        $data = $contentArray['data'];
+
+        // $asisten = User::query();
+        // $asisten -> select('users.*', 'name');
+        // $asisten -> where('role_id', '2');
+        // if(!empty($request->asisten)) {
+        //     $asisten->where('name', 'like', '%'.$request->asisten.'%');
+        // }
+        // $pegawai = $asisten->get();
+
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+        $perPage = 10; // You can set the number of items per page here
+        $path = LengthAwarePaginator::resolveCurrentPath();
+
+        $dataCollection = collect($data);
+
+        $currentPageItems = $dataCollection
+            ->slice(($currentPage - 1) * $perPage, $perPage)
+            ->all();
+
+        $data = new LengthAwarePaginator(
+            $currentPageItems,
+            count($dataCollection),
+            $perPage,
+            $currentPage,
+            ['path' => $path]
+        );
 
 
         return view('dokter.tableAkunAsisten', compact('pegawai' , 'data'));

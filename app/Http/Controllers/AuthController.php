@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
+use GuzzleHttp\Client;
 
 class AuthController extends Controller
 {
@@ -42,7 +43,7 @@ class AuthController extends Controller
         auth()->logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/');
+        return redirect('/login');
     }
 
     public function showAccount () {
@@ -55,15 +56,34 @@ class AuthController extends Controller
         return view('dokter.tableAkunAsisten', compact('pegawai'));
     }
 
-    public function destroy($id){
-    $user = User::find($id);
+//     public function destroy($id){
+//     $user = User::find($id);
 
-    // $this->authorize('delete', $user);
+//     // $this->authorize('delete', $user);
 
-    $user->delete();
+//     $user->delete();
 
-    return redirect('/showAkun')->with('success', 'Akun Asisten berhasil dihapus.');
-}
+//     return redirect('/showAkun')->with('success', 'Akun Asisten berhasil dihapus.');
+// }
+
+    public function destroy(string $id){
+        $client = new Client();
+    $url = "http://localhost:8000/api/deleteAkun/$id";
+
+    try {
+        $response = $client->request('DELETE', $url);
+        $content = $response->getBody()->getContents();
+        $contentArray = json_decode($content, true);
+
+        if ($contentArray['status'] !== true) {
+            return redirect('/showAkun')->back()->with('error', 'Gagal hapus obat: ' . $contentArray['message']);
+        } else {
+            return redirect('/showAkun')->back()->with('success', 'Data Obat berhasil dihapus.');
+        }
+    } catch (\Exception $e) {
+        return redirect()->back()->with('error', 'Gagal hapus obat: ' . $e->getMessage());
+    }
+    }
 
 //     public function updateProfile(Request $request)
 // {

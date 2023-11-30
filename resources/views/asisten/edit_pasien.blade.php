@@ -44,16 +44,14 @@
                 <div class="card-header shadow mb-3">{{ __('Edit Data Pasien') }}</div>
 
                 <div class="card-body">
-                  <form action={{route('patients.update', ['patient' => $patient['id']])}} method="post" name='edit'>
+                    <form action="{{ route('patients.update', ['id' => $patient['id']]) }}" method="post" name="edit">
                         @csrf
                         @method('PUT')
-
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nama Pasien') }}</label>
 
                             <div class="col-md-6 mb-3">
-                              <input type="text" name='name' value = "{{$patient['name']}}" placeholder="Nama Baru..." id="name" class="form-control @error('name') is-invalid @enderror" required >
-
+                                <input type="text" name="name" value="{{ $patient['name'] }}" required>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

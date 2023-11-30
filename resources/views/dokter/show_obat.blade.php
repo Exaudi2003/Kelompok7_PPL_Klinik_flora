@@ -78,6 +78,7 @@
           <th scope="col">Keterangan</th>
           <th scope="col">Tanggal Masuk</th>
           <th scope="col">Jumlah</th>
+          <th scope="col">Kemasan</th>
           <th scope="col">Status</th>
           {{-- <th scope="col">Action</th> --}}
         </tr>
@@ -88,13 +89,14 @@
       <tbody class="text-center">
         @foreach ($data as $obat)
         <tr >
-            <th scope="row">{{ $obat->id }}</th>
-            <td>{{ $obat->nama_obat }}</td>
-            <td>{{ $obat->keterangan }}</td>
-            <td>{{ $obat->tanggal_masuk }}</td>
-            <td>{{ $obat->jumlah }}</td>
+            <th scope="row">{{ $obat['id'] }}</th>
+            <td>{{ $obat['nama_obat'] }}</td>
+            <td>{{ $obat['keterangan'] }}</td>
+            <td>{{ $obat['tanggal_masuk'] }}</td>
+            <td>{{ $obat['jumlah'] }}</td>
+            <td>{{ $obat['kemasan'] }}</td>
             <td class="">
-                @if ($obat->jumlah <= 0)
+                @if ($obat['jumlah'] <= 0)
                     <span class="false text-white">{{ __('Habis') }}</span>
                 @else
                     <span class="true text-white">{{ __('Tersedia') }}</span>
