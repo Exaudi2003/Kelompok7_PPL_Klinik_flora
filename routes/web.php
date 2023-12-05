@@ -110,9 +110,8 @@ Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
 
     Route::delete('/deletePasien{id}', [CreatePatientController::class, 'gone'])->name('delete.pasien');
 
-    Route::get('/patients/redirect{patient}',[CreatePatientController::class, 'edit'])->name('patients.edit');
-
-    Route::put('/patients/edit/{patient}', [CreatePatientController::class,'update'])->name('patients.update');
+    Route::get('/patients/edit/{id}', [CreatePatientController::class, 'edit'])->name('patients.edit');
+    Route::put('/patients/edit/{id}', [CreatePatientController::class, 'update'])->name('patients.update');
 
         //obat
 
@@ -122,7 +121,7 @@ Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
 
     Route::get('/obat/show',[CreateObatController::class, 'show'])->name('obat.show');
 
-    Route::delete('/deleteObat{id}', [CreateObatController::class, 'destroy'])->name('delete.obat');
+    Route::delete('/obat/{id}', [CreateObatController::class, 'destroy'])->name('delete.obat');
 
     Route::get('/obats/redirect/{obat}',[CreateObatController::class, 'edit'])->name('obat.edit');
 

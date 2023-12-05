@@ -7,8 +7,6 @@ use App\Models\MedicalRecord;
 use App\Models\Obat;
 use App\Models\User;
 use App\Models\Patient;
-use Carbon\Carbon as CarbonCarbon;
-use Carbon\Doctrine\CarbonType;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;

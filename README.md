@@ -1,84 +1,66 @@
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<<<<<<< HEAD
-PPL-Klinik-Flora
-Software Testing
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-Selamat Datang Di Projek PPL Kami Hal Pertama yang akan dilakukan Sebelum Menjalankan Projek
+## About Laravel
 
-Clone Repository
--Buka terminal atau command prompt di komputer Anda.
--Gunakan perintah git clone untuk mengunduh salinan repositori. ('git clone https://github.com/username/nama-repositori.git')
--Pindah ke Direktori Repositori:
--Gunakan perintah cd untuk pindah ke direktori repositori yang baru saja Anda clone:
--Contoh ( cd nama-repositori )
--Masuk ke dalam projek dengan mengetik ( code .) di command prompt anda
--Install Composer
--Pastikan Anda telah menginstal Composer, manajer dependensi PHP untuk Laravel.
--Instal Dependensi
--Buka terminal dan pindah ke direktori proyek Laravel yang telah Anda clone.
--Jalankan perintah berikut untuk menginstal semua dependensi yang diperlukan: (composer install)
--Buat File env.
--Duplikat file .env.example dan ubah namanya menjadi .env.
--Buka file .env dan sesuaikan pengaturan database dan konfigurasi lainnya jika diperlukan.
--Import Database
--FIle sql ada di file yang di upload, silahkan import database di phpmyadmin
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-Jalankan Proyek
-Setelah mengikuti langkah - langkah diatas, maka kita bisa menjalankan proyek dengan mengetik : ( php artisan serve )
-=======
-# PPL-Klinik-Flora
-Software Testing
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Selamat Datang Di Projek PPL Kami 
-Hal Pertama yang akan dilakukan Sebelum Menjalankan Projek
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-# Clone Repository
-- Buka terminal atau command prompt di komputer Anda.
-- Gunakan perintah git clone untuk mengunduh salinan repositori.
-('git clone https://github.com/username/nama-repositori.git')
+## Learning Laravel
 
-# Pindah ke Direktori Repositori:
-- Gunakan perintah cd untuk pindah ke direktori repositori yang baru saja Anda clone:
-- Contoh ( cd nama-repositori )
--  Masuk ke dalam projek dengan mengetik
-   ( code .) di command prompt anda
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-# Install Composer
-- Pastikan Anda telah menginstal Composer, manajer dependensi PHP untuk Laravel.
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-# Instal Dependensi 
-- Buka terminal dan pindah ke direktori proyek Laravel yang telah Anda clone.
-- Jalankan perintah berikut untuk menginstal semua dependensi yang diperlukan:
-   (composer install)
-# Buat File env.
-- Duplikat file `.env`.example dan ubah namanya menjadi .env.
-- Buka file `.env` dan sesuaikan pengaturan database dan konfigurasi lainnya jika diperlukan.
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-# Import Database
- FIle sql ada di file yang di upload, silahkan import database di phpmyadmin
+## Laravel Sponsors
 
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-# Jalankan Proyek
-Setelah mengikuti langkah - langkah diatas, maka kita bisa menjalankan proyek dengan mengetik : 
-( php artisan serve )
+### Premium Partners
 
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[OP.GG](https://op.gg)**
+- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+- **[Lendio](https://lendio.com)**
 
- # Tutorial Import Database
+## Contributing
 
-- Hal yang pertama dilakukan sebelum mengimport database adalah memiliki aplikkasi navicat premium.
-- Jika belum memiliki aplikasi navicat premium dapat mendowload terlebih dahulu
-- aplikasinya dapat di download di link berikut 
-- ( https://drive.google.com/file/d/1vVAejzSIJuGO5wWb7ZGEyp56C1g6nmuY/view?pli=1 )
-- untuk pemasangan navicat nya dapat dilihati di link berikut ( https://www.youtube.com/watch?v=TpL8HsEfqwE )
-- untuk import database juga sudah ada dalam vidio
-- Ikuti langkah - langkah yang ada dan jalan kan programnya
-- Terimakasih jika ada kesulitan bisa dilakukan dengan bertanya
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-#Import melalui PhpMyAdmin
-- Buka PhpMyAdmin
-- Create database baru dengan menggunakan nama yang sama dengan file sql
-- import file sqlnya
-- jalankan project
+## Code of Conduct
 
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
->>>>>>> d90e390e2f6e05a74a2c381c52069aadfec93a67
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
