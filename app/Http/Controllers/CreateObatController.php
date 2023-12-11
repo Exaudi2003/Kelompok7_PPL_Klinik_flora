@@ -77,7 +77,7 @@ class CreateObatController extends Controller
         $filter = $request->input('filter');
 
     $client = new Client();
-    $url = "http://127.0.0.1:8000/api/obat";
+    $url = "http://127.0.0.1:8000/api/obat/show";
 
     if ($filter == 'habis') {
         $url .= "?filter=habis";

@@ -31,7 +31,7 @@ Route::delete('patient/{id}',[PatientController::class, 'destroy']);
 
 Route::get('obat',[ObatController::class, 'index']);
 Route::get('obat/{id}',[ObatController::class, 'show']);
-Route::post('obat',[ObatControcldller::class, 'store']);
+Route::post('obat',[ObatController::class, 'store']);
 Route::put('obat/{id}',[ObatController::class, 'update']);
 Route::delete('obat/{id}',[ObatController::class, 'destroy']);
 
