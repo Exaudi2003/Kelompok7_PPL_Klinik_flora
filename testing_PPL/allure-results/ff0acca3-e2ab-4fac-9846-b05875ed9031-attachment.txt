@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#alert.alert-danger.alert-dismissible.fade.show.mt-2\"}\n  (Session info: chrome=119.0.6045.200)",
-  "stacktrace": "\tGetHandleVerifier [0x00007FF7F4AE82B2+55298]\n\t(No symbol) [0x00007FF7F4A55E02]\n\t(No symbol) [0x00007FF7F49105AB]\n\t(No symbol) [0x00007FF7F495175C]\n\t(No symbol) [0x00007FF7F49518DC]\n\t(No symbol) [0x00007FF7F498CBC7]\n\t(No symbol) [0x00007FF7F49720EF]\n\t(No symbol) [0x00007FF7F498AAA4]\n\t(No symbol) [0x00007FF7F4971E83]\n\t(No symbol) [0x00007FF7F494670A]\n\t(No symbol) [0x00007FF7F4947964]\n\tGetHandleVerifier [0x00007FF7F4E60AAB+3694587]\n\tGetHandleVerifier [0x00007FF7F4EB728E+4048862]\n\tGetHandleVerifier [0x00007FF7F4EAF173+4015811]\n\tGetHandleVerifier [0x00007FF7F4B847D6+695590]\n\t(No symbol) [0x00007FF7F4A60CE8]\n\t(No symbol) [0x00007FF7F4A5CF34]\n\t(No symbol) [0x00007FF7F4A5D062]\n\t(No symbol) [0x00007FF7F4A4D3A3]\n\tBaseThreadInitThunk [0x00007FFE19987344+20]\n\tRtlUserThreadStart [0x00007FFE1B6E26B1+33]\n"
-}

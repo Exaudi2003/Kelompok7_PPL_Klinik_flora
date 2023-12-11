@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "#alert.alert-success.alert-dismissible.fade.show.mt-2"
-}

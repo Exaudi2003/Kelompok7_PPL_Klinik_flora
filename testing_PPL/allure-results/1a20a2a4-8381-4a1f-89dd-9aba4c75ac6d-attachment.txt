@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "#row justify-content-center"
-}

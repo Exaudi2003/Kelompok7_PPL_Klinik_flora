@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#tanggal_masuk\"}\n  (Session info: chrome=119.0.6045.200)",
-  "stacktrace": "\tGetHandleVerifier [0x00007FF6192082B2+55298]\n\t(No symbol) [0x00007FF619175E02]\n\t(No symbol) [0x00007FF6190305AB]\n\t(No symbol) [0x00007FF61907175C]\n\t(No symbol) [0x00007FF6190718DC]\n\t(No symbol) [0x00007FF6190ACBC7]\n\t(No symbol) [0x00007FF6190920EF]\n\t(No symbol) [0x00007FF6190AAAA4]\n\t(No symbol) [0x00007FF619091E83]\n\t(No symbol) [0x00007FF61906670A]\n\t(No symbol) [0x00007FF619067964]\n\tGetHandleVerifier [0x00007FF619580AAB+3694587]\n\tGetHandleVerifier [0x00007FF6195D728E+4048862]\n\tGetHandleVerifier [0x00007FF6195CF173+4015811]\n\tGetHandleVerifier [0x00007FF6192A47D6+695590]\n\t(No symbol) [0x00007FF619180CE8]\n\t(No symbol) [0x00007FF61917CF34]\n\t(No symbol) [0x00007FF61917D062]\n\t(No symbol) [0x00007FF61916D3A3]\n\tBaseThreadInitThunk [0x00007FFCCB687344+20]\n\tRtlUserThreadStart [0x00007FFCCD0426B1+33]\n"
-}
