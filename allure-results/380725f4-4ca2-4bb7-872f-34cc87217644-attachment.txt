@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": ".dropdown-menu button[type='submit']"
-}
