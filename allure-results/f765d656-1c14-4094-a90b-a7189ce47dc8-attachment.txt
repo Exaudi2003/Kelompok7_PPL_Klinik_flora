@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": ".dropdown-menu form[action=\"/logout\"] button[type=\"submit\"]"
+}
